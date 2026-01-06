@@ -55,3 +55,14 @@ kube-controller-manager: Handles background tasks like replacing failed pods.
 coredns: Handles networking and service discovery within the cluster.
 kube-proxy: Manages network rules on nodes to allow traffic to your pods.
 -------------------------------------------------------------------------------------------------------------------------------------
+
+Command: kubectl config set-context $(kubectl config current-context) --namespace=dev
+
+How it works (Breakdown):
+kubectl config set-context: This is the base command used to modify your kubeconfig file (usually located at ~/.ssh/config).
+$(kubectl config current-context): This is a sub-command. It dynamically grabs the name of the cluster/user context you are currently using.
+--namespace=dev: This tells Kubernetes: "From now on, for this specific context, assume I am working in the dev namespace."
+
+Why use this?
+By default, kubectl looks at the default namespace. If you are a developer working strictly in a dev or staging environment, typing the namespace every time is tedious and error-prone.
+-------------------------------------------------------------------------------------------------------------------------------------
