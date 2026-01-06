@@ -20,3 +20,25 @@ new-replica-set: The specific name of the ReplicaSet you want to target.
 NOTE: This will not edit the original file, hence not recommended to use. Use for testing purpose only.
 
 -------------------------------------------------------------------------------------------------------------------------------------
+Command: kubectl get all
+
+Contrary to its name, this command does not actually show everything in your cluster. It shows a specific subset of "workload-related" resources.
+
+What it DOES show:
+-Pods
+-Services
+-Deployments
+-ReplicaSets
+-StatefulSets
+-Jobs / CronJobs
+
+What it DOES NOT show:
+-ConfigMaps and Secrets
+-PersistentVolumes (PV) and PVCs
+-Ingress rules
+-Role-Based Access Control (RBAC) (Roles, RoleBindings)
+-Nodes
+
+Why is it like this?
+Kubernetes uses "Categories" to group resources. The all category is a hardcoded list on the server side designed to give you a quick "application health" status without cluttering your screen with configuration files or system-level settings.
+-------------------------------------------------------------------------------------------------------------------------------------
