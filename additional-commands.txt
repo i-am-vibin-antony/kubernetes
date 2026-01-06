@@ -1,0 +1,11 @@
+Command: kubectl api-resources
+Description: Use this command to see the full list of supported resource types (Pods, Services, Deployments, etc.) along with their associated API Groups and Versions.
+
+Key Output Columns:
+NAME: The resource name (e.g., pods).
+SHORTNAMES: Abbreviated names (e.g., po, svc).
+APIVERSION: The API group and version used in your YAML files (e.g., v1 or apps/v1).
+NAMESPACED: Whether the resource lives inside a namespace (true) or is cluster-wide (false).
+KIND: The resource type used in the kind: field of a manifest.
+
+-------------------------------------------------------------------------------------------------------------------------------------
