@@ -42,3 +42,16 @@ What it DOES NOT show:
 Why is it like this?
 Kubernetes uses "Categories" to group resources. The all category is a hardcoded list on the server side designed to give you a quick "application health" status without cluttering your screen with configuration files or system-level settings.
 -------------------------------------------------------------------------------------------------------------------------------------
+
+Command: kubectl get pods --namespace=kube-system
+
+--namespace=kube-system: This directs the command away from your default workspace
+When you run this, you'll see the "brain" of Kubernetes. These pods are critical; if they fail, the cluster fails.
+
+etcd: The distributed database that stores all cluster data (the "source of truth").
+kube-apiserver: The front door to the cluster. Every kubectl command you run talks to this.
+kube-scheduler: Decides which node a new pod should live on.
+kube-controller-manager: Handles background tasks like replacing failed pods.
+coredns: Handles networking and service discovery within the cluster.
+kube-proxy: Manages network rules on nodes to allow traffic to your pods.
+-------------------------------------------------------------------------------------------------------------------------------------
