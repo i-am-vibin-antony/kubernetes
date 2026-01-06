@@ -8,6 +8,8 @@ APIVERSION: The API group and version used in your YAML files (e.g., v1 or apps/
 NAMESPACED: Whether the resource lives inside a namespace (true) or is cluster-wide (false).
 KIND: The resource type used in the kind: field of a manifest.
 
+NOTE: You can find more info about the resource using "kubectl explain pods"
+
 -------------------------------------------------------------------------------------------------------------------------------------
 Command: kubectl scale rs new-replica-set --replicas=5
 
