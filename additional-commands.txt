@@ -9,3 +9,14 @@ NAMESPACED: Whether the resource lives inside a namespace (true) or is cluster-w
 KIND: The resource type used in the kind: field of a manifest.
 
 -------------------------------------------------------------------------------------------------------------------------------------
+Command: kubectl scale rs new-replica-set --replicas=5
+
+Explanation:
+kubectl scale: The base command used to increase or decrease the number of running pods for a specific controller.
+rs: Short for replicaset. You can also use the full name replicaset.
+new-replica-set: The specific name of the ReplicaSet you want to target.
+--replicas=5: The "Desired State." Kubernetes will now ensure exactly 5 pods are running. If there were 2, it creates 3 more. If there were 10, it deletes 5.
+
+NOTE: This will not edit the original file, hence not recommended to use. Use for testing purpose only.
+
+-------------------------------------------------------------------------------------------------------------------------------------
