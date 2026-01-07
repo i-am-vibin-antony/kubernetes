@@ -1,0 +1,22 @@
+Command: kubectl get pods --selector env=dev
+
+Purpose:
+Lists Kubernetes Pods that match a specific label.
+
+kubectl
+Command-line tool to interact with a Kubernetes cluster.
+
+get pods
+Retrieves information about Pods running in the cluster (default namespace unless specified).
+
+--selector env=dev (or -l env=dev)
+Filters Pods based on a label selector.
+env → label key
+dev → label value
+Only Pods with the label env=dev are shown.
+
+Use case:
+View Pods belonging to a specific environment (e.g., development).
+Helpful in multi-environment or microservices setups.
+
+-------------------------------------------------------------------------------------------------------------------------------------
