@@ -20,3 +20,8 @@ View Pods belonging to a specific environment (e.g., development).
 Helpful in multi-environment or microservices setups.
 
 -------------------------------------------------------------------------------------------------------------------------------------
+/etc/kubernetes/manifests/kube-apiserver.yaml
+
+This file contains information about addmission controller 
+
+------------------------------------------------------------------------------------------------------------------------------------
